@@ -8,7 +8,7 @@ model = dict(pretrained='torchvision://resnet101', backbone=dict(depth=101))
         
 # dataset settings
 dataset_type = 'MyDataset'
-data_root = '../../../AN-2'
+data_root = '../AN-2'
 train_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(type='LoadProposals', num_max_proposals=2000),
