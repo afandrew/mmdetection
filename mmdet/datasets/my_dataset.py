@@ -3,13 +3,16 @@ from .builder import DATASETS
 from .xml_style import XMLDataset
 import mmcv
 import numpy as np
+from pathlib import Path
 
 @DATASETS.register_module
 class MyDataset(XMLDataset):
 
     CLASSES = ('AN-2')
-    
+
     def load_annotations(self, ann_file):
+        print("File      Path:", Path(__file__).absolute())
+        print("Directory Path:", Path().absolute())  
         ann_list = mmcv.list_from_file(ann_file)
 
         data_infos = []
