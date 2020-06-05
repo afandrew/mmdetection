@@ -1,6 +1,8 @@
 from .coco import CocoDataset
 from .builder import DATASETS
 from .xml_style import XMLDataset
+import mmcv
+import numpy as np
 
 @DATASETS.register_module
 class MyDataset(XMLDataset):
