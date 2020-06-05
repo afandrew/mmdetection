@@ -1,8 +1,7 @@
 from .coco import CocoDataset
-from mmdet.utils import Registry
+from .builder import DATASETS
 from .xml_style import XMLDataset
 
-DATASETS = Registry('dataset')
 @DATASETS.register_module
 class MyDataset(XMLDataset):
 
